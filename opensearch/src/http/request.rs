@@ -76,7 +76,7 @@ where
 }
 
 /// A JSON body of an API call.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct JsonBody<T>(pub(crate) T);
 
 impl<T> JsonBody<T>
@@ -112,7 +112,7 @@ where
 }
 
 /// A Newline-delimited body of an API call
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct NdBody<T>(pub(crate) Vec<T>);
 
 impl<T> NdBody<T>
